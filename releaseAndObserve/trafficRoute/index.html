@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/mesh.svg" />
+    
+
+    <title>
+        
+          trafficRoute - Mesh Demo Tutorial
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <div>
+    <img src="/mesh.svg">
+  </div>
+  <a href="/">
+    <span>Mesh Demo Tutorial</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1. 概览"></a><a href="/overview">1. 概览</a></h2><ul>
+<li><a href="/overview/tutorial">1.1 教程概览</a></li>
+<li><a href="/overview/abstract">1.2 Demo概览</a></li>
+</ul>
+<h2 id="2-发布变更-amp-可观测性"><a href="#2-发布变更-amp-可观测性" class="headerlink" title="2. 发布变更&amp;可观测性"></a><a href="/releaseAndObserve">2. 发布变更&amp;可观测性</a></h2><ul>
+<li><a href="/releaseAndObserve/initialState">2.1 Demo初始状态</a></li>
+<li><a href="/releaseAndObserve/trafficRoute">2.2 基于流量特征内容的路由</a></li>
+<li><a href="/releaseAndObserve/weightedRoute">2.3 权重路由（灰度发布）</a></li>
+</ul>
+<h3 id="3-服务间的网络通信是高可用的"><a href="#3-服务间的网络通信是高可用的" class="headerlink" title="3. 服务间的网络通信是高可用的"></a><a href="/netCommunication">3. 服务间的网络通信是高可用的</a></h3><ul>
+<li><a href="/netCommunication/troubleInjection">3.1 故障注入测试服务弹性</a></li>
+<li><a href="/netCommunication/timeout">3.2 配置服务timeout</a></li>
+<li><a href="/netCommunication/sessionRetention">3.3 会话保持——一致性hash负载均衡策略</a></li>
+<li><a href="/netCommunication/circleBreaking">3.4 circuit breaking断路器</a></li>
+<li><a href="/netCommunication/crossRegionService">3.5 跨地域多集群下的服务间流量请求高可用</a></li>
+</ul>
+<h3 id="4-服务间的连接是安全的"><a href="#4-服务间的连接是安全的" class="headerlink" title="4. 服务间的连接是安全的"></a><a href="/safeLink">4. 服务间的连接是安全的</a></h3><ul>
+<li><a href="/safeLink/authCertification">4.1 认证Authentication</a></li>
+<li><a href="/safeLink/auth">4.2 授权Authorization</a></li>
+</ul>
+<h3 id="5-结语"><a href="#5-结语" class="headerlink" title="5. 结语"></a><a href="/conclusion">5. 结语</a></h3>
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-1 lg-hide">
+        <style>
+  .post-nav-prev {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-prev:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+
+  }
+</style>
+
+
+
+  <div class="post-nav-prev">
+    <a href="/releaseAndObserve/initialState/" ><img src="/prev.svg"></a>
+  </div>
+
+
+      </div>
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h4 id="2-2-基于流量特征内容的路由"><a href="#2-2-基于流量特征内容的路由" class="headerlink" title="2.2 基于流量特征内容的路由"></a>2.2 基于流量特征内容的路由</h4><p>背景：网站计划推出会员积分抵扣运费的活动以发展会员。电商网站策划了会员积分抵扣订单金额的新功能，当前部署的order服务由v1 deployment提供，没有运费抵扣的功能；网站新开发了order服务的v2版本，有积分抵扣运费的功能。网站希望可以于请求的header中是否会员的cookie信息进行路由，会员路由至order v2（有运费抵扣功能），非会员路由至order v1（无运费抵扣功能）。</p>
+<p>提交以下yaml文件至集群-广州，部署order v2至集群</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">order-v2</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">base</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">order</span></span><br><span class="line">    <span class="attr">version:</span> <span class="string">v2</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">app:</span> <span class="string">order</span></span><br><span class="line">      <span class="attr">version:</span> <span class="string">v2</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">app:</span> <span class="string">order</span></span><br><span class="line">        <span class="attr">version:</span> <span class="string">v2</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">order</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">ccr.ccs.tencentyun.com/zhulei/testorder2:v1</span></span><br><span class="line">          <span class="attr">imagePullPolicy:</span> <span class="string">Always</span></span><br><span class="line">          <span class="attr">env:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">POD_NAME</span></span><br><span class="line">              <span class="attr">valueFrom:</span></span><br><span class="line">                <span class="attr">fieldRef:</span></span><br><span class="line">                  <span class="attr">fieldPath:</span> <span class="string">metadata.name</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">REGION</span></span><br><span class="line">              <span class="attr">value:</span> <span class="string">&quot;guangzhou&quot;</span></span><br><span class="line">          <span class="attr">ports:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">containerPort:</span> <span class="number">7000</span></span><br><span class="line">              <span class="attr">protocol:</span> <span class="string">TCP</span></span><br></pre></td></tr></table></figure>
+<p>部署完成后，由于还未配置路由规则，此时访问order服务的流量会被随机路由至v1版本或v2版本。<br><img src="/images/releaseAndObserve/2-2-1.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>配置基于流量特征内容的路由规则前先需要通过DestinationRule定义order服务的两个版本。<br><img src="/images/releaseAndObserve/2-2-2.png" alt=" &#39;image.png&#39;" title="image.png"><br><img src="/images/releaseAndObserve/2-2-3.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>两个版本定义完成后，通过VirtualService定义按流量特征进行路由，请求的header-cookie中vip=false时路由至order服务的v1 subset，vip=true时路由至order服务的v2 subset。即会员的请求路由至order v2，非会员的请求路由至order v1。复制以下VirtualService的yaml配置通过“YAML创建资源”提交，即可完成上述配置。<br>:pushpin:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">VirtualService</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">order-vs</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">base</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">hosts:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">  <span class="attr">http:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">match:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">headers:</span></span><br><span class="line">            <span class="attr">cookie:</span></span><br><span class="line">              <span class="attr">exact:</span> <span class="string">vip=false</span></span><br><span class="line">      <span class="attr">route:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">destination:</span></span><br><span class="line">            <span class="attr">host:</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">            <span class="attr">subset:</span> <span class="string">v1</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">match:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">headers:</span></span><br><span class="line">            <span class="attr">cookie:</span></span><br><span class="line">              <span class="attr">exact:</span> <span class="string">vip=true</span></span><br><span class="line">      <span class="attr">route:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">destination:</span></span><br><span class="line">            <span class="attr">host:</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">            <span class="attr">subset:</span> <span class="string">v2</span></span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，可登陆会员帐号（ID：1-3）加购和买单，发现有运费抵扣功能，流量被路由到了order v2版本；登陆非会员账号（ID：4-5）加购和买单，发现无运费抵扣功能，根据header中的VIP字段信息，请求被路由到了最初部署的order v1版本。版本信息也可通过左下角悬浮窗中的信息观察。</p>
+<p><img src="/images/releaseAndObserve/2-2-4.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/images/releaseAndObserve/2-2-5.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/images/releaseAndObserve/2-2-6.svg" alt=" &#39;image.png&#39;" title="image.svg"></p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-1 lg-hide">
+        <style>
+  .post-nav-next {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-next:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+</style>
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/releaseAndObserve/weightedRoute/" ><img src="/next.svg"></a>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #eee;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #3d3737;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      /* opacity: 0; */
+      padding: 0px 6px 3px;
+      position: absolute;
+      right: 10px;
+      top: 6pxpx;
+      border: 0px;
+    }
+
+    .highlight-wrap .copy-btn:hover {
+      background-color: #534f4f;
+    } 
+
+    .highlight-wrap {
+      position: relative;
+    }
+    
+    </style>
+    <script>
+      $('.highlight').each(function (i, e) {
+        var $wrap = $('<div>').addClass('highlight-wrap')
+        $(e).after($wrap)
+        $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+          var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+            return $(e).text()
+          }).toArray().join('\n')
+          var ta = document.createElement('textarea')
+          document.body.appendChild(ta)
+          ta.style.position = 'absolute'
+          ta.style.top = '0px'
+          ta.style.left = '0px'
+          ta.value = code
+          ta.select()
+          ta.focus()
+          var result = document.execCommand('copy')
+          document.body.removeChild(ta)
+          // if(theme.codeblock.copy_button.show_result){
+          //   if(result)$(this).text('{{__("theme.copyWords.copy_success")}}')
+          //   else $(this).text('{{__("theme.copyWords.copy_failure")}}') 
+          // }
+          $(this).blur()
+        })).on('mouseleave', function (e) {
+          var $b = $(this).find('.copy-btn')
+          setTimeout(function () {
+            $b.text('copy')
+          }, 300)
+        }).append(e)
+      })
+  </script>
+  
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>

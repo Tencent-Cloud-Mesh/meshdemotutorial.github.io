@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980px" height="816px" viewBox="0 0 980 816" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>5. 故障注入02</title>
+    <defs>
+        <rect id="path-1" x="40" y="196" width="900" height="580"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="900" height="580" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="60" y="226" width="860" height="530"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="860" height="530" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="5.-故障注入02" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形备份-3" fill="#EAEBEC" fill-rule="nonzero" x="80" y="504" width="130" height="96"></rect>
+        <text id="user" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="90" y="529">user</tspan>
+        </text>
+        <g id="编组-6" transform="translate(90.000000, 538.000000)">
+            <g id="内容方块-单行备份">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="user" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="40" y="33">user</tspan>
+                </text>
+            </g>
+            <g id="编组备份-2" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <rect id="矩形备份-5" fill="#EAEBEC" fill-rule="nonzero" x="500" y="504" width="130" height="96"></rect>
+        <text id="cart" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="510" y="529">cart</tspan>
+        </text>
+        <g id="编组-4" transform="translate(510.000000, 538.000000)">
+            <g id="内容方块-单行备份-3">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="cart" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="41" y="33">cart</tspan>
+                </text>
+            </g>
+            <g id="编组备份-3" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <rect id="矩形备份-4" fill="#EAEBEC" fill-rule="nonzero" x="230" y="504" width="250" height="96"></rect>
+        <text id="product" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="240" y="529">product</tspan>
+        </text>
+        <g id="编组-5" transform="translate(240.000000, 538.000000)">
+            <g id="内容方块-两行备份-2">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="大文本" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="20" y="23">product v1</tspan>
+                </text>
+                <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#888888">
+                    <tspan x="12" y="43">(无广告banner)</tspan>
+                </text>
+            </g>
+            <g id="编组备份" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <g id="编组-5备份" transform="translate(360.000000, 538.000000)">
+            <g id="内容方块-两行备份-2">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="大文本" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="19" y="23">product v2</tspan>
+                </text>
+                <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#888888">
+                    <tspan x="12" y="43">(有广告banner)</tspan>
+                </text>
+            </g>
+            <g id="编组备份" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <rect id="矩形备份-6" fill="#EAEBEC" fill-rule="nonzero" x="650" y="504" width="250" height="96"></rect>
+        <text id="order" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="660" y="529">order</tspan>
+        </text>
+        <g id="编组-3" transform="translate(660.000000, 538.000000)">
+            <g id="内容方块-两行备份-4">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="大文本" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="28" y="23">order v1</tspan>
+                </text>
+                <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#888888">
+                    <tspan x="8" y="43">(无积分抵扣系统)</tspan>
+                </text>
+            </g>
+            <g id="编组备份-4" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <g id="编组-3备份" transform="translate(780.000000, 538.000000)">
+            <g id="内容方块-两行备份-4">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="大文本" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="26.5" y="23">order v2</tspan>
+                </text>
+                <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#888888">
+                    <tspan x="8" y="43">(有积分抵扣系统)</tspan>
+                </text>
+            </g>
+            <g id="编组备份-4" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <polygon id="路径备份-4" fill="#888888" transform="translate(145.000000, 501.000000) rotate(-180.000000) translate(-145.000000, -501.000000) " points="150 504 145 498 140 504"></polygon>
+        <polygon id="路径" fill="#E4514A" transform="translate(565.000000, 501.000000) rotate(-180.000000) translate(-565.000000, -501.000000) " points="570 504 565 498 560 504"></polygon>
+        <polygon id="路径备份-5" fill="#FFA600" transform="translate(715.000000, 535.000000) rotate(-180.000000) translate(-715.000000, -535.000000) " points="720 538 715 532 710 538"></polygon>
+        <g id="编组-11" transform="translate(608.500000, 453.500000) rotate(-270.000000) translate(-608.500000, -453.500000) translate(606.000000, 420.000000)" fill="#FFA600">
+            <polygon id="路径备份-12" transform="translate(2.500000, 64.000000) rotate(-180.000000) translate(-2.500000, -64.000000) " points="5 67 0 61 0 67"></polygon>
+            <rect id="矩形" x="4" y="-2.27373675e-13" width="1" height="61"></rect>
+        </g>
+        <polygon id="路径备份-9" fill="#FFA600" transform="translate(835.000000, 535.000000) rotate(-180.000000) translate(-835.000000, -535.000000) " points="840 538 835 532 830 538"></polygon>
+        <polygon id="路径" fill="#888888" transform="translate(295.000000, 535.000000) rotate(-180.000000) translate(-295.000000, -535.000000) " points="300 538 295 532 290 538"></polygon>
+        <polygon id="路径备份" fill="#888888" transform="translate(415.000000, 535.000000) rotate(-180.000000) translate(-415.000000, -535.000000) " points="420 538 415 532 410 538"></polygon>
+        <rect id="矩形备份-5" fill="#EAEBEC" fill-rule="nonzero" x="605" y="640" width="130" height="96"></rect>
+        <text id="stock" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="615" y="665">stock</tspan>
+        </text>
+        <g id="编组-7" transform="translate(615.000000, 674.000000)">
+            <g id="内容方块-单行备份-3">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="108" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="107" height="49"></rect>
+                <text id="stock" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="36" y="33">stock</tspan>
+                </text>
+            </g>
+            <g id="编组备份-5" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <rect id="矩形备份-7" fill="#EAEBEC" fill-rule="nonzero" x="290" y="348" width="160" height="96"></rect>
+        <text id="frontend" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="300" y="373">frontend</tspan>
+        </text>
+        <g id="编组-8" transform="translate(300.000000, 382.000000)">
+            <g id="内容方块-单行备份-4">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="138" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="137" height="49"></rect>
+                <text id="frontend" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="41" y="33">frontend</tspan>
+                </text>
+            </g>
+            <g id="编组备份-6" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <polyline id="路径备份-2" stroke="#888888" transform="translate(242.500000, 473.000000) rotate(-180.000000) translate(-242.500000, -473.000000) " points="145 502 145 482 340 482 340 444"></polyline>
+        <polyline id="路径备份-10" stroke="#FFA600" transform="translate(775.000000, 498.000000) scale(-1, 1) rotate(-180.000000) translate(-775.000000, -498.000000) " points="715 532 835 532 835 464"></polyline>
+        <polyline id="路径备份-8" stroke="#FFA600" transform="translate(557.500000, 488.000000) scale(-1, 1) rotate(-180.000000) translate(-557.500000, -488.000000) " points="400 532 400 512 715 512 715 444"></polyline>
+        <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="605" y="496">http header vip = faise</tspan>
+        </text>
+        <text id="小文本备份-7" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#FFA600">
+            <tspan x="661" y="482">timeout 3s</tspan>
+        </text>
+        <text id="小文本备份-5" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#FFA600">
+            <tspan x="583" y="451">504 timeout</tspan>
+        </text>
+        <text id="小文本备份-2" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="299" y="500">0%</tspan>
+        </text>
+        <text id="小文本备份-3" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="385" y="500">100%</tspan>
+        </text>
+        <text id="小文本备份" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="729" y="496">http header vip = true</tspan>
+        </text>
+        <text id="小文本备份-8" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#FFA600">
+            <tspan x="781" y="482">timeout 3s</tspan>
+        </text>
+        <polyline id="路径备份-7" stroke="#E4514A" transform="translate(472.500000, 473.000000) scale(-1, 1) rotate(-180.000000) translate(-472.500000, -473.000000) " points="380 502 380 472 565 472 565 444"></polyline>
+        <line x1="360" y1="484" x2="360" y2="444" id="路径备份-6" stroke="#888888" transform="translate(360.000000, 464.000000) rotate(-180.000000) translate(-360.000000, -464.000000) "></line>
+        <polyline id="路径备份-6" stroke="#888888" transform="translate(327.500000, 508.000000) rotate(-180.000000) translate(-327.500000, -508.000000) " points="295 532 360 532 360 484"></polyline>
+        <polyline id="路径备份-11" stroke="#888888" transform="translate(387.500000, 508.000000) scale(-1, 1) rotate(180.000000) translate(-387.500000, -508.000000) " points="360 532 415 532 415 484"></polyline>
+        <g id="编组-9" transform="translate(565.000000, 600.000000)">
+            <polyline id="路径备份-3" stroke="#E4514A" transform="translate(105.000000, 10.000000) scale(1, -1) rotate(180.000000) translate(-105.000000, -10.000000) " points="2.61124455e-12 -2.8449465e-13 2.70450329e-12 20 210 20 210 0"></polyline>
+            <g id="编组-3备份-7" transform="translate(105.000000, 30.000000) rotate(-180.000000) translate(-105.000000, -30.000000) translate(100.000000, 20.000000)">
+                <line x1="5" y1="20" x2="5" y2="2" id="路径" stroke="#E4514A"></line>
+                <polygon id="路径" fill="#E4514A" points="10 6 5 0 -5.68434189e-14 6"></polygon>
+            </g>
+        </g>
+        <rect id="矩形备份-4" fill="#EAEBEC" fill-rule="nonzero" x="290" y="80" width="160" height="244"></rect>
+        <text id="istio-ingressgateway" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="300" y="105">istio-ingressgateway</tspan>
+        </text>
+        <g id="内容方块-两行备份-3" transform="translate(300.000000, 256.000000)">
+            <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="138" height="50"></rect>
+            <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="137" height="49"></rect>
+            <g id="编组备份-6" transform="translate(53.000000, 9.000000)">
+                <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                <path d="M16.0013983,5.16619039 L7.0043335,10.5661002 L7.0043335,21.4338998 L16.0013983,26.8338096 L25.0043335,21.4337195 L25.0043335,10.5662805 L16.0013983,5.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <g id="编组" transform="translate(300.000000, 114.000000)">
+            <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="138" height="50"></rect>
+            <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="137" height="49"></rect>
+            <g id="编组-2" transform="translate(37.000000, 10.000000)">
+                <text id="CLB" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="36" y="23">CLB</tspan>
+                </text>
+                <g id="图标-负载均衡-CLB">
+                    <g id="负载均衡-32px">
+                        <rect id="Rectangle-Copy" fill="#444444" fill-rule="nonzero" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M16,0 C23.811235,0 30.3151005,5.59751424 31.7192447,13.000191 L29.677892,13.0003278 C28.3046747,6.70979962 22.7023537,2 16,2 C8.2680135,2 2,8.2680135 2,16 C2,23.7319865 8.2680135,30 16,30 C23.052652,30 28.8872801,24.7850199 29.8581018,18.0008423 L31.8761139,18.0007904 C30.8915668,25.8930309 24.1589629,32 16,32 C7.163444,32 1.95399252e-14,24.836556 1.95399252e-14,16 C1.95399252e-14,7.163444 7.163444,0 16,0 Z M20,19 C21.1045695,19 22,19.8954305 22,21 C22,22.1045695 21.1045695,23 20,23 C18.8954305,23 18,22.1045695 18,21 C18,19.8954305 18.8954305,19 20,19 Z M16,10 L16,12 L12,12 L12,15 L16,15 L16,17 L12,17 L12,20 L16,20 L16,22 L10,22 L10,10 L16,10 Z M20,14 C21.1045695,14 22,14.8954305 22,16 C22,17.1045695 21.1045695,18 20,18 C18.8954305,18 18,17.1045695 18,16 C18,14.8954305 18.8954305,14 20,14 Z M20,9 C21.1045695,9 22,9.8954305 22,11 C22,12.1045695 21.1045695,13 20,13 C18.8954305,13 18,12.1045695 18,11 C18,9.8954305 18.8954305,9 20,9 Z" id="形状结合" fill="#00A4FF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="编组-3备份-4" transform="translate(370.000000, 211.000000) rotate(-180.000000) translate(-370.000000, -211.000000) translate(365.000000, 166.000000)">
+            <line x1="5" y1="90" x2="5" y2="3" id="路径" stroke="#888888"></line>
+            <polygon id="路径" fill="#888888" points="10 6 5 0 5.68434189e-14 6"></polygon>
+        </g>
+        <g id="编组-3备份-9" transform="translate(370.000000, 328.000000) rotate(-180.000000) translate(-370.000000, -328.000000) translate(365.000000, 308.000000)">
+            <line x1="5" y1="40" x2="5" y2="2" id="路径" stroke="#888888"></line>
+            <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+        </g>
+        <g id="编组-3备份-10" transform="translate(370.000000, 60.000000) rotate(-180.000000) translate(-370.000000, -60.000000) translate(365.000000, 40.000000)">
+            <line x1="5" y1="40" x2="5" y2="2" id="路径" stroke="#888888"></line>
+            <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+        </g>
+        <use id="矩形备份-8" stroke="#00A4FF" mask="url(#mask-2)" stroke-width="2" stroke-dasharray="6,4" xlink:href="#path-1"></use>
+        <use id="矩形备份-8" stroke="#00A4FF" mask="url(#mask-4)" stroke-width="2" stroke-dasharray="6,4" xlink:href="#path-3"></use>
+        <text id="TKE集群1" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#00A4FF">
+            <tspan x="90" y="251">TKE集群1</tspan>
+        </text>
+        <text id="VPC广州" font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="12" fill="#00A4FF">
+            <tspan x="70" y="219">VPC广州</tspan>
+        </text>
+        <g id="私有网络-16px" transform="translate(50.000000, 204.000000)" fill-rule="nonzero">
+            <rect id="Rectangle-Copy" fill="#444444" opacity="0" x="0" y="0" width="16" height="16"></rect>
+            <path d="M8,0 C11.2337955,0 13.8773626,2.5700718 13.9958544,5.77536834 L14,6 L15,6 L15,15 L1,15 L1,6 L2,6 C2,2.691 4.691,0 8,0 Z M13,8 L3,8 L3,13 L13,13 L13,8 Z M9,9 L9,12 L7,12 L7,9 L9,9 Z M8,2 C5.86084848,2 4.1091056,3.68692011 4.00490369,5.80062799 L4,6 L12,6 C12,3.794 10.206,2 8,2 Z" id="形状结合" fill="#00A4FF"></path>
+        </g>
+        <g id="容器服务-16px" transform="translate(70.000000, 236.000000)" fill-rule="nonzero">
+            <rect id="Rectangle-Copy" fill="#444444" opacity="0" x="0" y="0" width="16" height="16"></rect>
+            <path d="M9,0.5715 L9,7.0005 L15,7.0005 L15,4.0005 L9,0.5715 Z M10.7,3.5005 L13.299,4.9855 L13.299,5.3005 L10.7,5.3005 L10.7,3.5005 Z M7,0.5715 L1,4.0005 L1,7.0005 L7,7.0005 L7,0.5715 Z M2.7,4.9855 L5.3,3.5005 L5.3,5.3005 L2.7,5.3005 L2.7,4.9855 Z M9,8.9995 L9,15.4285 L15,11.9995 L15,8.9995 L9,8.9995 Z M10.7,10.7005 L13.299,10.7005 L13.299,11.0145 L10.7,12.4995 L10.7,10.7005 Z M1,8.9995 L1,11.9995 L7,15.4285 L7,8.9995 L1,8.9995 Z M2.7,11.0145 L2.7,10.7005 L5.3,10.7005 L5.3,12.4995 L2.7,11.0145 Z" id="Fill-1" fill="#00A4FF"></path>
+        </g>
+        <text id="小文本备份-4" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#E4514A">
+            <tspan x="680" y="635">fixed delay 7s</tspan>
+        </text>
+        <text id="小文本备份-6" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#E4514A">
+            <tspan x="486" y="496">pending until 7s</tspan>
+        </text>
+        <g id="编组-2" transform="translate(40.000000, 40.000000)">
+            <g id="编组-3备份-11" transform="translate(8.000000, 33.000000) rotate(-270.000000) translate(-8.000000, -33.000000) translate(3.000000, 25.000000)">
+                <line x1="5" y1="16" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+            <g id="编组备份-2">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+            <text id="proxy" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#888888">
+                <tspan x="20" y="16">proxy</tspan>
+            </text>
+            <text id="traffic-flow" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#888888">
+                <tspan x="20" y="41">traffic flow</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

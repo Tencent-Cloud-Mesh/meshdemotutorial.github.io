@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="398px" viewBox="0 0 400 398" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>6. 会话保持</title>
+    <g id="6.-会话保持" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="矩形备份-4" fill="#EAEBEC" fill-rule="nonzero" x="60" y="130" width="280" height="208"></rect>
+        <text id="cart" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="70" y="155">cart</tspan>
+        </text>
+        <text id="requests" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+            <tspan x="171" y="75">requests</tspan>
+        </text>
+        <g id="编组" transform="translate(70.000000, 164.000000)">
+            <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="258" height="70"></rect>
+            <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="257" height="69"></rect>
+            <g id="编组-2" transform="translate(31.000000, 46.000000)" fill="#444444" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14">
+                <text id="consistent-hash-load">
+                    <tspan x="0" y="15">consistent hash load balancer</tspan>
+                </text>
+            </g>
+        </g>
+        <g id="编组-3" transform="translate(164.000000, 84.000000)">
+            <g id="编组-3备份-10" transform="translate(5.000000, 40.000000) rotate(-180.000000) translate(-5.000000, -40.000000) ">
+                <line x1="5" y1="80" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+            <g id="编组-3备份-14" transform="translate(35.000000, 40.000000) rotate(-180.000000) translate(-35.000000, -40.000000) translate(30.000000, 0.000000)">
+                <line x1="5" y1="80" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+            <g id="编组-3备份-15" transform="translate(65.000000, 40.000000) rotate(-180.000000) translate(-65.000000, -40.000000) translate(60.000000, 0.000000)">
+                <line x1="5" y1="80" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+        </g>
+        <g id="编组-5" transform="translate(115.000000, 236.000000)">
+            <g id="编组-3备份-11" transform="translate(5.000000, 20.000000) rotate(-180.000000) translate(-5.000000, -20.000000) ">
+                <line x1="5" y1="40" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+            <g id="编组-3备份-12" transform="translate(25.000000, 20.000000) rotate(-180.000000) translate(-25.000000, -20.000000) translate(20.000000, 0.000000)">
+                <line x1="5" y1="40" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+        </g>
+        <g id="编组-3备份-13" transform="translate(270.000000, 256.000000) rotate(-180.000000) translate(-270.000000, -256.000000) translate(265.000000, 236.000000)">
+            <line x1="5" y1="40" x2="5" y2="2" id="路径" stroke="#54BA66"></line>
+            <polygon id="路径" fill="#54BA66" points="10 6 5 0 0 6"></polygon>
+        </g>
+        <g id="编组-4" transform="translate(70.000000, 276.000000)">
+            <g id="内容方块-单行备份-3">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="118" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="117" height="49"></rect>
+                <text id="Pod-1" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#444444">
+                    <tspan x="41" y="33">Pod 1</tspan>
+                </text>
+            </g>
+            <g id="编组备份-3" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <g id="编组-4备份" transform="translate(210.000000, 276.000000)">
+            <g id="内容方块-单行备份-3">
+                <rect id="矩形" fill="#BBBBBB" opacity="0.600000024" x="2" y="2" width="118" height="50"></rect>
+                <rect id="矩形备份" stroke="#E5E5E5" fill="#FFFFFF" fill-rule="nonzero" x="0.5" y="0.5" width="117" height="49"></rect>
+                <text id="Pod-2" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#54BA66">
+                    <tspan x="39.5" y="33">Pod 2</tspan>
+                </text>
+            </g>
+            <g id="编组备份-3" transform="translate(2.000000, 2.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+        </g>
+        <text id="小文本" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="70" y="251">request 1,</tspan>
+            <tspan x="70" y="263">user id =1</tspan>
+        </text>
+        <text id="小文本备份" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#888888">
+            <tspan x="145" y="253">request 2,</tspan>
+            <tspan x="145" y="265">user id =1</tspan>
+        </text>
+        <text id="小文本备份-2" font-family="PingFangSC-Regular, PingFang SC" font-size="10" font-weight="normal" line-spacing="12" fill="#54BA66">
+            <tspan x="275" y="253">request 3,</tspan>
+            <tspan x="275" y="265">user id =2</tspan>
+        </text>
+        <g id="编组-2" transform="translate(40.000000, 40.000000)">
+            <g id="编组-3备份-11" transform="translate(8.000000, 33.000000) rotate(-270.000000) translate(-8.000000, -33.000000) translate(3.000000, 25.000000)">
+                <line x1="5" y1="16" x2="5" y2="2" id="路径" stroke="#888888"></line>
+                <polygon id="路径" fill="#888888" points="10 6 5 0 0 6"></polygon>
+            </g>
+            <g id="编组备份-2">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <path d="M8.00077876,3.16619039 L4.00216675,5.56610022 L4.00216675,10.4338998 L8.00077876,12.8338096 L12.0021667,10.4337195 L12.0021667,5.5662805 L8.00077876,3.16619039 Z" id="多边形" stroke="#00A4FF" stroke-width="2"></path>
+            </g>
+            <text id="proxy" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#888888">
+                <tspan x="20" y="16">proxy</tspan>
+            </text>
+            <text id="traffic-flow" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" line-spacing="14" fill="#888888">
+                <tspan x="20" y="41">traffic flow</tspan>
+            </text>
+        </g>
+        <g id="编组-12" transform="translate(184.000000, 174.000000)">
+            <rect id="Rectangle-Copy" fill="#444444" fill-rule="nonzero" opacity="0" x="0" y="0" width="32" height="32"></rect>
+            <polygon id="路径" fill="#00A4FF" transform="translate(28.000000, 24.000000) rotate(-270.000000) translate(-28.000000, -24.000000) " points="33 27 28 21 23 27"></polygon>
+            <polygon id="路径备份-17" fill="#00A4FF" transform="translate(28.000000, 8.000000) rotate(-270.000000) translate(-28.000000, -8.000000) " points="33 11 28 5 23 11"></polygon>
+            <polyline id="路径-2" stroke="#00A4FF" stroke-width="2" points="1 16 11.0019531 16 19.0019531 8 26 8"></polyline>
+            <polyline id="路径-2备份" stroke="#00A4FF" stroke-width="2" transform="translate(19.500000, 21.000000) scale(1, -1) translate(-19.500000, -21.000000) " points="13 24 19.0019531 18 26 18"></polyline>
+        </g>
+    </g>
+</svg>

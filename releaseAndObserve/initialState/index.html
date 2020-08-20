@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/mesh.svg" />
+    
+
+    <title>
+        
+          initialState - Mesh Demo Tutorial
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/css/book.css">
+
+    
+<script src="/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <div>
+    <img src="/mesh.svg">
+  </div>
+  <a href="/">
+    <span>Mesh Demo Tutorial</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1. 概览"></a><a href="/overview">1. 概览</a></h2><ul>
+<li><a href="/overview/tutorial">1.1 教程概览</a></li>
+<li><a href="/overview/abstract">1.2 Demo概览</a></li>
+</ul>
+<h2 id="2-发布变更-amp-可观测性"><a href="#2-发布变更-amp-可观测性" class="headerlink" title="2. 发布变更&amp;可观测性"></a><a href="/releaseAndObserve">2. 发布变更&amp;可观测性</a></h2><ul>
+<li><a href="/releaseAndObserve/initialState">2.1 Demo初始状态</a></li>
+<li><a href="/releaseAndObserve/trafficRoute">2.2 基于流量特征内容的路由</a></li>
+<li><a href="/releaseAndObserve/weightedRoute">2.3 权重路由（灰度发布）</a></li>
+</ul>
+<h3 id="3-服务间的网络通信是高可用的"><a href="#3-服务间的网络通信是高可用的" class="headerlink" title="3. 服务间的网络通信是高可用的"></a><a href="/netCommunication">3. 服务间的网络通信是高可用的</a></h3><ul>
+<li><a href="/netCommunication/troubleInjection">3.1 故障注入测试服务弹性</a></li>
+<li><a href="/netCommunication/timeout">3.2 配置服务timeout</a></li>
+<li><a href="/netCommunication/sessionRetention">3.3 会话保持——一致性hash负载均衡策略</a></li>
+<li><a href="/netCommunication/circleBreaking">3.4 circuit breaking断路器</a></li>
+<li><a href="/netCommunication/crossRegionService">3.5 跨地域多集群下的服务间流量请求高可用</a></li>
+</ul>
+<h3 id="4-服务间的连接是安全的"><a href="#4-服务间的连接是安全的" class="headerlink" title="4. 服务间的连接是安全的"></a><a href="/safeLink">4. 服务间的连接是安全的</a></h3><ul>
+<li><a href="/safeLink/authCertification">4.1 认证Authentication</a></li>
+<li><a href="/safeLink/auth">4.2 授权Authorization</a></li>
+</ul>
+<h3 id="5-结语"><a href="#5-结语" class="headerlink" title="5. 结语"></a><a href="/conclusion">5. 结语</a></h3>
+</div>
+
+
+<script src="/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-1 lg-hide">
+        <style>
+  .post-nav-prev {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-prev:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+
+  }
+</style>
+
+
+
+  <div class="post-nav-prev">
+    <a href="/overview/abstract/" ><img src="/prev.svg"></a>
+  </div>
+
+
+      </div>
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h4 id="2-1-Demo初始状态"><a href="#2-1-Demo初始状态" class="headerlink" title="2.1 Demo初始状态"></a>2.1 Demo初始状态</h4><p>体验环境创建完成后，网站所有服务已经部署至广州的集群（product服务和order服务只部署了v1版本），并且已自动注入了envoy sidecar接管服务流量，istio-ingressgateway已经创建，但未配置监听器规则以及路由规则以放通网站frontend服务至公网。</p>
+<p>首先需要创建Gateway资源，配置istio-ingressgateway的监听器规则，端口为80，协议为http。用户只需要配置Gateway规则，TCM后台会自动实现istio-ingressgateway相关的pod，service和绑定的负载均衡器CLB的配置同步。<br><img src="/images/releaseAndObserve/2-1-1.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>监听器规则配置完成后，还需要通过Virtual Service资源配置路由规则，将来自istio-ingressgateway的流量路由至frontend服务。<br><img src="/images/releaseAndObserve/2-1-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>配置完成后，通过istio-ingressgateway的公网IP地址即可访问到Demo网站，当前部署的网站的结构如下：</p>
+<p><img src="/images/releaseAndObserve/2-1-3.svg" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>点击链接访问网站后，可登陆、添加购物车，下单，以产生调用完所有部署的服务的请求，网站界面右下角的悬浮窗展示了前端服务当前调用服务的名称、地域、版本、pod name信息。</p>
+<p><img src="/images/releaseAndObserve/2-1-4.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>有流量数据后，可点击网络拓扑tab可查看网格内网络流量的拓扑图。点击服务tab，服务详情页面可查看到请求的调用链，可查看调用stock服务的完整链路及每层调用的详细信息。</p>
+<p>业务规模增加，服务数量较多时，几乎每个前端请求都会形成复杂的调用链路，此时需要能够：在复杂的链路中快速定位和分析问题，判定故障影响范围；或需要梳理服务的调用依赖关系，判断其合理性；或分析链路的请求耗时等性能，做串并行分析的调用逻辑优化等。</p>
+<p>通过全链路跟踪系统，可描绘整个网格的流量特征，帮助开发者进行链路分析。</p>
+<p><img src="/images/releaseAndObserve/2-1-5.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/images/releaseAndObserve/2-1-6.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<span id='h2'>
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-1 lg-hide">
+        <style>
+  .post-nav-next {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-next:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+</style>
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/releaseAndObserve/trafficRoute/" ><img src="/next.svg"></a>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #eee;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #3d3737;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      /* opacity: 0; */
+      padding: 0px 6px 3px;
+      position: absolute;
+      right: 10px;
+      top: 6pxpx;
+      border: 0px;
+    }
+
+    .highlight-wrap .copy-btn:hover {
+      background-color: #534f4f;
+    } 
+
+    .highlight-wrap {
+      position: relative;
+    }
+    
+    </style>
+    <script>
+      $('.highlight').each(function (i, e) {
+        var $wrap = $('<div>').addClass('highlight-wrap')
+        $(e).after($wrap)
+        $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+          var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+            return $(e).text()
+          }).toArray().join('\n')
+          var ta = document.createElement('textarea')
+          document.body.appendChild(ta)
+          ta.style.position = 'absolute'
+          ta.style.top = '0px'
+          ta.style.left = '0px'
+          ta.value = code
+          ta.select()
+          ta.focus()
+          var result = document.execCommand('copy')
+          document.body.removeChild(ta)
+          // if(theme.codeblock.copy_button.show_result){
+          //   if(result)$(this).text('{{__("theme.copyWords.copy_success")}}')
+          //   else $(this).text('{{__("theme.copyWords.copy_failure")}}') 
+          // }
+          $(this).blur()
+        })).on('mouseleave', function (e) {
+          var $b = $(this).find('.copy-btn')
+          setTimeout(function () {
+            $b.text('copy')
+          }, 300)
+        }).append(e)
+      })
+  </script>
+  
+
+</body>
+</html>
+
+
+<script src="/js/book.js"></script>
