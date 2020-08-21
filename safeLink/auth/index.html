@@ -166,9 +166,9 @@ function sidebar_toggle() {
           <div class="book-post">
   <h4 id="4-2-授权Authorization"><a href="#4-2-授权Authorization" class="headerlink" title="4.2 授权Authorization"></a>4.2 授权Authorization</h4><p>背景：生产环境（base namespace）的服务已经稳定运行，电商网站业务团队希望对网格中的服务做权限控制，限制生产环境（base namespace）下的服务不能被测试环境（test namesapce）下的服务访问。</p>
 <p>对网格中的服务进行权限控制可通过配置AuthorizationPolicy实现，配置以下AuthorizationPolicy策略限制base namespace下所有服务不能被test namespace下的服务访问。</p>
-<p><img src="/images/safeLink/4-2-1.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/MeshDemoTutorial.github.io/safeLink/auth/images/safeLink/4-2-1.png" alt=" &#39;image.png&#39;" title="image.png"></p>
 <p>配置完成后通过TKE集群控制台查看test namespace下client服务的pod日志，发现client服务访问base namespace的user服务失败。授权策略生效。</p>
-<p>:pushpin:<strong>日志截图需更换</strong><br><img src="/images/safeLink/4-2-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>:pushpin:<strong>日志截图需更换</strong><br><img src="/MeshDemoTutorial.github.io/safeLink/auth/images/safeLink/4-2-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
 
 </div>
 
