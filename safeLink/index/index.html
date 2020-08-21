@@ -11,7 +11,7 @@
 
     <title>
         
-          overview/abstract - Mesh Demo Tutorial
+          index - Mesh Demo Tutorial
         
     </title>
 
@@ -144,7 +144,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-prev">
-    <a href="/MeshDemoTutorial.github.io/overview/tutorial/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
+    <a href="/MeshDemoTutorial.github.io/netCommunication/crossRegionService/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
   </div>
 
 
@@ -164,17 +164,7 @@ function sidebar_toggle() {
         </div>
         <div class="book-content">
           <div class="book-post">
-  <h4 id="1-2-Demo概览"><a href="#1-2-Demo概览" class="headerlink" title="1.2 Demo概览"></a>1.2 Demo概览</h4><p><img src="../..//images/overview/1-2-1.png" alt=" &#39;image.png&#39;"></p>
-<p><img src="../..//images/overview/1-2-2.svg" alt=" &#39;image.png&#39;"></p>
-<p>Demo是一个电商网站，由6个服务组成：</p>
-<ul>
-<li>frontend：网站前端，调用user、product、cart、order服务</li>
-<li>product：商品服务，提供商品信息<br>两个版本，版本一没有顶部广告banner；版本二有顶部广告banner</li>
-<li>user：用户登陆服务，提供登陆功能</li>
-<li>cart：购物车服务，提供添加、查看购物车功能，调用库存服务提供库存告警功能，需要登陆才可以下单</li>
-<li>order：订单结算服务，登陆后点击checkout后可发起结算，结算时需要调用stock库存服务查询库存情况，库存不足会下单失败<br>两个版本，版本一无积分抵扣运费的功能，版本二有积分抵扣运费的功能</li>
-<li>stock：库存服务，为order购物车服务的库存告警功能和order订单结算服务的库存查询提供库存信息</li>
-</ul>
+  <h3 id="4-服务间的连接是安全的"><a href="#4-服务间的连接是安全的" class="headerlink" title="4. 服务间的连接是安全的"></a>4. 服务间的连接是安全的</h3><p>TCM的一个重要应用场景是保证服务间通信连接的安全性，包括配置双向认证——服务间mTLS的配置，请求认证——认证请求中携带的JWT合法性，以及配置服务的授权策略。</p>
 
 </div>
 
@@ -214,7 +204,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/MeshDemoTutorial.github.io/releaseAndObserve/index/" ><img src="/MeshDemoTutorial.github.io/next.svg"></a>
+    <a href="/MeshDemoTutorial.github.io/safeLink/authCertification/" ><img src="/MeshDemoTutorial.github.io/next.svg"></a>
   </div>
 
 

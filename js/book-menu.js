@@ -18,9 +18,12 @@ function collapse(name, body, i) {
     checkbox.setAttribute("hidden", "");
 
     var label = document.createElement('label');
-    label.textContent = name.textContent
+    // label.textContent = name.textContent
+    // label.innerHTML = name.innerHTML;
+    label.appendChild(name.childNodes[1])
     label.setAttribute("class", "accordion-header c-hand");
     label.setAttribute("for", "accordion-" + i);
+    
 
     var icon = document.createElement('i');
     icon.setAttribute("class", "icon icon-arrow-down");
