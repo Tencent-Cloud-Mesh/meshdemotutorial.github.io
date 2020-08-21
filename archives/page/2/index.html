@@ -64,21 +64,26 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/MeshDemoTutorial.github.io/overview/tutorial">1.1 教程概览</a></li>
 <li><a href="/MeshDemoTutorial.github.io/overview/abstract">1.2 Demo概览</a></li>
 </ul>
-<h2 id="2-发布变更-amp-可观测性"><a href="#2-发布变更-amp-可观测性" class="headerlink" title="2. 发布变更&amp;可观测性"></a><a href="/MeshDemoTutorial.github.io/releaseAndObserve/index">2. 发布变更&amp;可观测性</a></h2><ul>
-<li><a href="/MeshDemoTutorial.github.io/releaseAndObserve/initialState">2.1 Demo初始状态</a></li>
-<li><a href="/MeshDemoTutorial.github.io/releaseAndObserve/trafficRoute">2.2 基于流量特征内容的路由</a></li>
-<li><a href="/MeshDemoTutorial.github.io/releaseAndObserve/weightedRoute">2.3 权重路由（灰度发布）</a></li>
+<h2 id="2-发布变更-amp-可观测性"><a href="#2-发布变更-amp-可观测性" class="headerlink" title="2. 发布变更&amp;可观测性"></a><a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/index">2. 发布变更&amp;可观测性</a></h2><ul>
+<li><a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/initialState">2.1 Demo初始状态</a></li>
+<li><a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/headerBasedRoute">2.2 基于流量特征内容的路由</a></li>
+<li><a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/weightedRoute">2.3 权重路由（灰度发布）</a></li>
 </ul>
-<h3 id="3-服务间的网络通信是高可用的"><a href="#3-服务间的网络通信是高可用的" class="headerlink" title="3. 服务间的网络通信是高可用的"></a><a href="/MeshDemoTutorial.github.io/netCommunication/index">3. 服务间的网络通信是高可用的</a></h3><ul>
-<li><a href="/MeshDemoTutorial.github.io/netCommunication/troubleInjection">3.1 故障注入测试服务弹性</a></li>
-<li><a href="/MeshDemoTutorial.github.io/netCommunication/timeout">3.2 配置服务timeout</a></li>
-<li><a href="/MeshDemoTutorial.github.io/netCommunication/sessionRetention">3.3 会话保持——一致性hash负载均衡策略</a></li>
-<li><a href="/MeshDemoTutorial.github.io/netCommunication/circleBreaking">3.4 circuit breaking断路器</a></li>
-<li><a href="/MeshDemoTutorial.github.io/netCommunication/crossRegionService">3.5 跨地域多集群下的服务间流量请求高可用</a></li>
+<h3 id="3-服务间的网络通信是高可用的"><a href="#3-服务间的网络通信是高可用的" class="headerlink" title="3. 服务间的网络通信是高可用的"></a><a href="/MeshDemoTutorial.github.io/highAvailability/index">3. 服务间的网络通信是高可用的</a></h3><ul>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/faultInjection">3.1 故障注入测试服务弹性</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/timeout">3.2 配置服务timeout</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/stickySession">3.3 会话保持——一致性hash负载均衡策略</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking">3.4 circuit breaking断路器</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/failover/index">3.5 跨地域多集群下的服务间流量请求高可用</a><ul>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality">3.5.1 就近接入</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality">3.5.2 地域感知</a></li>
+<li><a href="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion">3.5.3 服务级别跨地域容灾</a></li>
 </ul>
-<h3 id="4-服务间的连接是安全的"><a href="#4-服务间的连接是安全的" class="headerlink" title="4. 服务间的连接是安全的"></a><a href="/MeshDemoTutorial.github.io/safeLink/index">4. 服务间的连接是安全的</a></h3><ul>
-<li><a href="/MeshDemoTutorial.github.io/safeLink/authCertification">4.1 认证Authentication</a></li>
-<li><a href="/MeshDemoTutorial.github.io/safeLink/auth">4.2 授权Authorization</a></li>
+</li>
+</ul>
+<h3 id="4-服务间的连接是安全的"><a href="#4-服务间的连接是安全的" class="headerlink" title="4. 服务间的连接是安全的"></a><a href="/MeshDemoTutorial.github.io/security/index">4. 服务间的连接是安全的</a></h3><ul>
+<li><a href="/MeshDemoTutorial.github.io/security/authn">4.1 认证Authentication</a></li>
+<li><a href="/MeshDemoTutorial.github.io/security/authz">4.2 授权Authorization</a></li>
 </ul>
 <h3 id="5-结语"><a href="#5-结语" class="headerlink" title="5. 结语"></a><a href="/MeshDemoTutorial.github.io/conclusion/conclusion">5. 结语</a></h3>
 </div>
@@ -184,91 +189,112 @@ function sidebar_toggle() {
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/safeLink/auth/">
+                <a href="/MeshDemoTutorial.github.io/security/authz/">
                   auth
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/safeLink/authCertification/">
+                <a href="/MeshDemoTutorial.github.io/security/authn/">
                   authCertification
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/safeLink/index/">
+                <a href="/MeshDemoTutorial.github.io/security/index/">
                   index
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/crossRegionService/">
-                  crossRegionService
+                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/">
+                  failoverRegion
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/circleBreaking/">
+                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/">
+                  serviceLocality
+                </a>
+              </li>
+          
+              <li>
+                <span>2020-08-20</span>
+                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/">
+                  ingressLocality
+                </a>
+              </li>
+          
+              <li>
+                <span>2020-08-20</span>
+                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/index/">
+                  index
+                </a>
+              </li>
+          
+              <li>
+                <span>2020-08-20</span>
+                <a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking/">
                   circleBreaking
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/sessionRetention/">
+                <a href="/MeshDemoTutorial.github.io/highAvailability/stickySession/">
                   sessionRetention
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/timeout/">
+                <a href="/MeshDemoTutorial.github.io/highAvailability/timeout/">
                   timeout
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/troubleInjection/">
+                <a href="/MeshDemoTutorial.github.io/highAvailability/faultInjection/">
                   troubleInjection
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/netCommunication/index/">
+                <a href="/MeshDemoTutorial.github.io/highAvailability/index/">
                   index
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/releaseAndObserve/weightedRoute/">
+                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/weightedRoute/">
                   weightedRoute
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/releaseAndObserve/trafficRoute/">
+                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/headerBasedRoute/">
                   trafficRoute
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/releaseAndObserve/initialState/">
+                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/initialState/">
                   initialState
                 </a>
               </li>
           
               <li>
                 <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/releaseAndObserve/index/">
+                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/index/">
                   index
                 </a>
               </li>

@@ -11,7 +11,7 @@
 
     <title>
         
-          Mesh Demo Tutorial
+          failoverRegion - Mesh Demo Tutorial
         
     </title>
 
@@ -149,7 +149,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-prev">
-    <a href="/MeshDemoTutorial.github.io/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
+    <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
   </div>
 
 
@@ -168,168 +168,30 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <div class='book-archive'>
-  <!-- Title -->
-  
-    <h1>Archives</h1>
-  
+          <div class="book-post">
+  <h5 id="3-5-3-服务级别跨地域容灾"><a href="#3-5-3-服务级别跨地域容灾" class="headerlink" title="3.5.3 服务级别跨地域容灾"></a>3.5.3 服务级别跨地域容灾</h5><p>背景：网站业务团队希望所有的服务具备跨地域容灾的能力，如果其中一个地域的服务故障后，访问该服务的流量会被自动切换到另一地域。</p>
+<p>TCM提供服务跨地域容灾的能力。</p>
+<p>首先，通过TKE集群控制台将上海地域的product-v2 deployment的pod数量配置为0，模拟上海地域product服务的故障情况。</p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/../../../images/netCommunication/3-5-4.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>配置完成后，通过上海集群边缘代理网关的IP地址访问Demo电商网站，即使现在上海地域的product服务处于故障状态，商品页面还是可以正常访问，通过左下角悬浮窗会查看服务调用情况会发现当前页面调用的是广州地域的product服务，上海地域访问product服务的请求被路由到了广州的product服务，实现了服务级别的跨地域容灾。</p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/../../../images/netCommunication/3-5-5.svg" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/../../../images/netCommunication/3-5-6.png" alt=" &#39;image.png&#39;" title="image.png"></p>
 
-  
-    <!-- Split post by year -->
-    
-  
-
-  
-      <div class="years">
-          <h2>2020</h2>
-          <ul class="archive-list-item">
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/conclusion/conclusion/">
-                  conclusion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authz/">
-                  auth
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authn/">
-                  authCertification
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/">
-                  failoverRegion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/">
-                  serviceLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/">
-                  ingressLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking/">
-                  circleBreaking
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/stickySession/">
-                  sessionRetention
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/timeout/">
-                  timeout
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/faultInjection/">
-                  troubleInjection
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/weightedRoute/">
-                  weightedRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/headerBasedRoute/">
-                  trafficRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/initialState/">
-                  initialState
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/abstract/">
-                  overview/abstract
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/tutorial/">
-                  overview/tutorial
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-05</span>
-                <a href="/MeshDemoTutorial.github.io/menu/menu/">
-                  menu
-                </a>
-              </li>
-          
-          </ul>
-      </div>
-  
-
-  
 </div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/MeshDemoTutorial.github.io/js/book-post.js"></script>
+
         </div>
       </div>
       <div class="column col-1 lg-hide">
@@ -351,6 +213,10 @@ function sidebar_toggle() {
 
 </style>
 
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/MeshDemoTutorial.github.io/security/index/" ><img src="/MeshDemoTutorial.github.io/next.svg"></a>
+  </div>
 
 
       </div>

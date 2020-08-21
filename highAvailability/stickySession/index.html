@@ -11,7 +11,7 @@
 
     <title>
         
-          Mesh Demo Tutorial
+          sessionRetention - Mesh Demo Tutorial
         
     </title>
 
@@ -149,7 +149,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-prev">
-    <a href="/MeshDemoTutorial.github.io/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
+    <a href="/MeshDemoTutorial.github.io/highAvailability/timeout/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
   </div>
 
 
@@ -168,168 +168,30 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <div class='book-archive'>
-  <!-- Title -->
-  
-    <h1>Archives</h1>
-  
+          <div class="book-post">
+  <h4 id="3-3-会话保持——一致性hash负载均衡策略"><a href="#3-3-会话保持——一致性hash负载均衡策略" class="headerlink" title="3.3 会话保持——一致性hash负载均衡策略"></a>3.3 会话保持——一致性hash负载均衡策略</h4><p>背景：购物车服务由多个pod副本运行，需要会话保持功能，以保证同一用户请求被路由至同一个pod，保证同一用户的购物车信息不会丢失。</p>
+<p>会话保持功能可通过设置cart服务DestinationRule的负载均衡策略实现，以请求中header中的UserID做一致性hash负载均衡。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">DestinationRule</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">cart</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">base</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">host:</span> <span class="string">cart</span></span><br><span class="line">  <span class="attr">trafficPolicy:</span></span><br><span class="line">    <span class="attr">loadBalancer:</span></span><br><span class="line">      <span class="attr">consistentHash:</span></span><br><span class="line">        <span class="attr">httpHeaderName:</span> <span class="string">UserID</span></span><br><span class="line">  <span class="attr">exportTo:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;*&#x27;</span></span><br></pre></td></tr></table></figure>
 
-  
-    <!-- Split post by year -->
-    
-  
+<p>配置完成后，可在登陆状态多次点击“Your Cart”或点击“ADD TO CART”调用cart服务验证会话保持功能，同一用户的多次请求会被路由至同一个pod，左下角悬浮窗可查看提供cart服务的pod name。</p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/stickySession/../../images/netCommunication/3-3-1.svg" alt=" &#39;image.png&#39;" title="image.svg"></p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/stickySession/../../images/netCommunication/3-3-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
 
-  
-      <div class="years">
-          <h2>2020</h2>
-          <ul class="archive-list-item">
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/conclusion/conclusion/">
-                  conclusion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authz/">
-                  auth
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authn/">
-                  authCertification
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/">
-                  failoverRegion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/">
-                  serviceLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/">
-                  ingressLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking/">
-                  circleBreaking
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/stickySession/">
-                  sessionRetention
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/timeout/">
-                  timeout
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/faultInjection/">
-                  troubleInjection
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/weightedRoute/">
-                  weightedRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/headerBasedRoute/">
-                  trafficRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/initialState/">
-                  initialState
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/abstract/">
-                  overview/abstract
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/tutorial/">
-                  overview/tutorial
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-05</span>
-                <a href="/MeshDemoTutorial.github.io/menu/menu/">
-                  menu
-                </a>
-              </li>
-          
-          </ul>
-      </div>
-  
-
-  
 </div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/MeshDemoTutorial.github.io/js/book-post.js"></script>
+
         </div>
       </div>
       <div class="column col-1 lg-hide">
@@ -351,6 +213,10 @@ function sidebar_toggle() {
 
 </style>
 
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking/" ><img src="/MeshDemoTutorial.github.io/next.svg"></a>
+  </div>
 
 
       </div>

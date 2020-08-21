@@ -11,7 +11,7 @@
 
     <title>
         
-          Mesh Demo Tutorial
+          ingressLocality - Mesh Demo Tutorial
         
     </title>
 
@@ -149,7 +149,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-prev">
-    <a href="/MeshDemoTutorial.github.io/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
+    <a href="/MeshDemoTutorial.github.io/highAvailability/failover/index/" ><img src="/MeshDemoTutorial.github.io/prev.svg"></a>
   </div>
 
 
@@ -168,168 +168,30 @@ function sidebar_toggle() {
 
         </div>
         <div class="book-content">
-          <div class='book-archive'>
-  <!-- Title -->
-  
-    <h1>Archives</h1>
-  
+          <div class="book-post">
+  <h5 id="3-5-1-就近接入"><a href="#3-5-1-就近接入" class="headerlink" title="3.5.1 就近接入"></a>3.5.1 就近接入</h5><p>背景：随着电商网站业务规模的扩张，网站的业务从广州扩展至上海，业务团队希望上海的网站用户能通过上海的网关就近接入，请求通过腾讯云内网将访问请求转到广州的业务集群，上海与广州的VPC通过云联网打通。广州的网站用户还是通过广州的网关接入广州集群。</p>
+<p>应用以下配置到主集群，gateway配置上海集群边缘代理网关的监听器规则，放通80端口，http协议，VirtualService配置将来自边缘代理网关的流量路由至frontend服务。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Gateway</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">frontend-gw-sh</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">servers:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">port:</span></span><br><span class="line">        <span class="attr">number:</span> <span class="number">80</span></span><br><span class="line">        <span class="attr">name:</span> <span class="string">http</span></span><br><span class="line">        <span class="attr">protocol:</span> <span class="string">HTTP</span></span><br><span class="line">      <span class="attr">hosts:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&#x27;*&#x27;</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">app:</span> <span class="string">istio-ingressgateway-1</span></span><br><span class="line">    <span class="attr">istio:</span> <span class="string">ingressgateway</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">VirtualService</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">frontend-vs</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">base</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">hosts:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;*&#x27;</span></span><br><span class="line">  <span class="attr">gateways:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">base/frontend-gw</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">base/frontend-gw-sh</span></span><br><span class="line">  <span class="attr">http:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">route:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">destination:</span></span><br><span class="line">            <span class="attr">host:</span> <span class="string">frontend.base.svc.cluster.local</span></span><br></pre></td></tr></table></figure>
 
-  
-    <!-- Split post by year -->
-    
-  
+<p>配置完成后，通过上海的边缘代理网关IP地址即可访问到电商网站，即使上海的集群中没有部署电商网站相关服务，因为流量被跨地域路由到了广州的服务。</p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/../../../images/netCommunication/3-5-1.svg" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/../../../images/netCommunication/3-5-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
 
-  
-      <div class="years">
-          <h2>2020</h2>
-          <ul class="archive-list-item">
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/conclusion/conclusion/">
-                  conclusion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authz/">
-                  auth
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/authn/">
-                  authCertification
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/security/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/failoverRegion/">
-                  failoverRegion
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/">
-                  serviceLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/ingressLocality/">
-                  ingressLocality
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/failover/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/circuitBreaking/">
-                  circleBreaking
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/stickySession/">
-                  sessionRetention
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/timeout/">
-                  timeout
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/faultInjection/">
-                  troubleInjection
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/highAvailability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/weightedRoute/">
-                  weightedRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/headerBasedRoute/">
-                  trafficRoute
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/initialState/">
-                  initialState
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/trafficManageMentAndObservability/index/">
-                  index
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/abstract/">
-                  overview/abstract
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-20</span>
-                <a href="/MeshDemoTutorial.github.io/overview/tutorial/">
-                  overview/tutorial
-                </a>
-              </li>
-          
-              <li>
-                <span>2020-08-05</span>
-                <a href="/MeshDemoTutorial.github.io/menu/menu/">
-                  menu
-                </a>
-              </li>
-          
-          </ul>
-      </div>
-  
-
-  
 </div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/MeshDemoTutorial.github.io/js/book-post.js"></script>
+
         </div>
       </div>
       <div class="column col-1 lg-hide">
@@ -351,6 +213,10 @@ function sidebar_toggle() {
 
 </style>
 
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/MeshDemoTutorial.github.io/highAvailability/failover/serviceLocality/" ><img src="/MeshDemoTutorial.github.io/next.svg"></a>
+  </div>
 
 
       </div>
