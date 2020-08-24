@@ -1,0 +1,23 @@
+<style>
+  .post-nav-next {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-next:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+</style>
+
+<% if(page.prev) { %>
+  <div class="post-nav-next post-nav-item">
+    <a href="<%- url_for(page.prev.path) %>" ><img src="<%- url_for(theme.nextImg) %>"></a>
+  </div>
+<% } %>

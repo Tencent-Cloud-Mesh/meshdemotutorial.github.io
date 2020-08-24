@@ -1,0 +1,24 @@
+<style>
+  .post-nav-prev {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-prev:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+
+  }
+</style>
+
+
+<% if (page.next && page.next.title !== 'menu') { %>
+  <div class="post-nav-prev">
+    <a href="<%- url_for(page.next.path) %>" ><img src="<%- url_for(theme.prevImg) %>"></a>
+  </div>
+<% } %>
