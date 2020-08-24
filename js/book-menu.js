@@ -62,6 +62,10 @@ function pack_menu_accordion() {
             collapse(sibling, e, idx);
         }
     })
+    document.querySelectorAll('.book-menu > h3').forEach((e, idx) => {
+        e.classList.add('accordion');
+        e.style.margin = '0 0'
+    })
 }
 
 // highlight current tab
