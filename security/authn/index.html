@@ -169,13 +169,13 @@ function sidebar_toggle() {
         </div>
         <div class="book-content">
           <div class="book-post">
-  <h4 id="4-1-认证Authentication"><a href="#4-1-认证Authentication" class="headerlink" title="4.1 认证Authentication"></a>4.1 认证Authentication</h4><p>背景：电商网站业务团队希望限制访问生产环境（base namespace）下所有服务间的访问必须开启双向认证mTLS，以防御中间人攻击。</p>
+  <h2 id="4-1-认证Authentication"><a href="#4-1-认证Authentication" class="headerlink" title="4.1 认证Authentication"></a>4.1 认证Authentication</h2><p>背景：电商网站业务团队希望限制访问生产环境（base namespace）下所有服务间的访问必须开启双向认证mTLS，以防御中间人攻击。</p>
 <p>服务间通信的mTLS模式默认为PERMISSIVE宽容模式，即服务间的通信既可以使用mTLS加密，也可以使用plaintext明文连接。</p>
-<p>此时在tke集群控制台登陆client的istio-proxy容器，使用明文连接对生产环境（base namespace）product服务发起请求：<code>curl http://product.base.svc.cluster.local:7000/product</code>，此时明文连接也可正常访问product服务。<br><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-1.png" alt=" &#39;image.png&#39;" title="image.png"><br><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-2.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p>此时在tke集群控制台登陆client的istio-proxy容器，使用明文连接对生产环境（base namespace）product服务发起请求：<code>curl http://product.base.svc.cluster.local:7000/product</code>，此时明文连接也可正常访问product服务。<br><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-1.png" alt="明文连接访问成功" title="image.png"><br><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-2.png" alt="登录istio-proxy容器" title="image.png"></p>
 <p>限制base namespace下的服务间通信必须采用mTLS模式可以通过PeerAuthentication策略设置mTLS模式为STRICT完成。</p>
-<p><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-3.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-3.png" alt="配置mTLS模式为strict" title="image.png"></p>
 <p>配置完成后，在tke集群控制台登陆client的istio-proxy容器，使用明文连接对生产环境（base namespace）product服务发起请求：<code>curl http://product.base.svc.cluster.local:7000/product</code>，此时明文连接访问失败。</p>
-<p><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-4.png" alt=" &#39;image.png&#39;" title="image.png"></p>
+<p><img src="/MeshDemoTutorial.github.io/security/authn/../../images/safeLink/4-1-4.png" alt="明文连接访问失败" title="image.png"></p>
 
 </div>
 
