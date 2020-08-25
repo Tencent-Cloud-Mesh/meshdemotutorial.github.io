@@ -13,8 +13,8 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://tencent-cloud-mesh.github.io/MeshDemoTutorial.github.io/
-root: /MeshDemoTutorial.github.io/
+url: https://tencent-cloud-mesh.github.io/meshdemotutorial.github.io/
+root: /meshdemotutorial.github.io/
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -103,6 +103,9 @@ theme: book
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/Tencent-Cloud-Mesh/MeshDemoTutorial.github.io
-  branch: master
+  - type: git
+    repo: git@github.com:Tencent-Cloud-Mesh/MeshDemoTutorial.github.io.git
+    branch: master
+  # - type: git
+  #   repo: https://gitee.com/tencent-cloud-mesh/MeshDemoTutorial.github.io.git
+  #   branch: master

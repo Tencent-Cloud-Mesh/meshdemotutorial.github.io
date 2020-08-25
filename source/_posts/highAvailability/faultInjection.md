@@ -4,7 +4,7 @@ date: 2020-08-20 20:17:08
 tags:
 ---
 ## 3.1 故障注入测试服务弹性
-![图3-1-1-stock服务fixed delay 7s](../../images/netCommunication/3-1-1.svg 'image.svg')
+![图3-1-1-stock服务fixed delay 7s](../../images/netCommunication/3-1-1.svg)
 背景：电商网站业务团队需要模拟访问库存服务存在延迟故障时网站系统的行为，以测试服务弹性，网站用户的优化访问体验。
 
 通过配置绑定stock服务的VritualService，设置访问stock服务的故障注入策略：100%的请求会有7秒的固定延迟。
@@ -34,6 +34,6 @@ EOF
 
 
 
-![图3-1-2-cart服务调用stock服务的等待状态](../../images/netCommunication/3-1-2.png 'image.png')
+![图3-1-2-cart服务调用stock服务的等待状态](../../images/netCommunication/3-1-2.png)
 
 网站用户的浏览体验优化可以通过配置超时timeout实现。

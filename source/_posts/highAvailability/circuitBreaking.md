@@ -73,9 +73,9 @@ EOF
 
 此时对于访问user服务没有最大并发数限制，所有请求均可访问成功。通过TKE集群控制台client deployment查看client pod日志，所有的请求均返回了用户名Kevin，证明访问请求成功。
 
-![图3-4-1-高并发请求](../../images/netCommunication/3-4-1.svg 'image.svg')
+![图3-4-1-高并发请求](../../images/netCommunication/3-4-1.svg)
 
-![图3-4-2-所有请求均可访问成功](../../images/netCommunication/3-4-2.png 'image.png')
+![图3-4-2-所有请求均可访问成功](../../images/netCommunication/3-4-2.png )
 
 通过配置user服务的Destination Rule限制最大并发数为1：
 
@@ -101,7 +101,7 @@ EOF
 
 此时查看client pod日志，部分请求开始出现异常，未返回用户名，请求失败，断路器起到了限制访问服务最大并发数的作用。
 
-![图3-4-3-部分请求访问失败](../../images/netCommunication/3-4-3.png 'image.png')
+![图3-4-3-部分请求访问失败](../../images/netCommunication/3-4-3.png)
 
 断路器测试完成后，在user服务的详情页面删除断路器相关流量策略配置。
-![图3-4-4-删除流量策略相关配置](../../images/netCommunication/3-4-4.png 'image.png')
+![图3-4-4-删除流量策略相关配置](../../images/netCommunication/3-4-4.png)

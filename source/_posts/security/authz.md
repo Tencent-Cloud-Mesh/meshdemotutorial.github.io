@@ -9,8 +9,8 @@ tags:
 
 对网格中的服务进行权限控制可通过配置AuthorizationPolicy实现，配置以下AuthorizationPolicy策略限制base namespace下所有服务不能被test namespace下的服务访问。
 
-![图4-2-1-配置授权规则](../../images/safeLink/4-2-1.png 'image.png')
+![图4-2-1-配置授权规则](../../images/safeLink/4-2-1.png)
 
 配置完成后通过TKE集群控制台查看test namespace下client服务的pod日志，发现client服务访问base namespace的user服务失败。授权策略生效。
 
-![图4-2-2-授权规则限制后，访问失败](../../images/safeLink/4-2-2.png 'image.png')
+![图4-2-2-授权规则限制后，访问失败](../../images/safeLink/4-2-2.png)
