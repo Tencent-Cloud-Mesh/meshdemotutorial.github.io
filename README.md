@@ -6,7 +6,7 @@ mesh tutorial基于hexo博客框架进行部署，所以要部署mesh tutorial�
 
 ## 2. mesh tutorial 本地部署
 
-`git clone git@github.com:Tencent-Cloud-Mesh/mesh-tutorial.git`: clone tutorial源码到本地，源码放于hexo分支上
+`git clone git@github.com:Tencent-Cloud-Mesh/mesh-tutorial.git`: clone tutorial源码到本地，源码放于github hexo分支上
 
 `npm install`: 安装依赖包
 
@@ -30,8 +30,15 @@ mesh tutorial基于hexo博客框架进行部署，所以要部署mesh tutorial�
 
 `hexo g`:  生成public文件夹
 
-`hexo d`:  将网站部署到github上，网站相关代码（public）放于master分支上
+`hexo d`:  将网站部署到github/gitee上，网站相关代码（public）放于master分支上
+
+### ！！！注意事项
+
+部署到github/gitee上之前需要先配置ssh key，仓库地址在./_config.yml deploy选项中定义
 
 ## 6. 访问网站
 
-https://tencent-cloud-mesh.github.io/MeshDemoTutorial.github.io/
+github pages: https://tencent-cloud-mesh.github.io/MeshDemoTutorial.github.io/
+
+gitee pages: https://tencent-cloud-mesh.github.io/meshdemotutorial.github.io/overview/abstract/
+

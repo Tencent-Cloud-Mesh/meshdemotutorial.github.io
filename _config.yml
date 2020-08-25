@@ -104,8 +104,8 @@ theme: book
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: git@github.com:Tencent-Cloud-Mesh/MeshDemoTutorial.github.io.git
+    repo: https://github.com/Tencent-Cloud-Mesh/MeshDemoTutorial.github.io.git
     branch: master
-  # - type: git
-  #   repo: https://gitee.com/tencent-cloud-mesh/MeshDemoTutorial.github.io.git
-  #   branch: master
+  - type: git
+    repo: git@gitee.com:tencent-cloud-mesh/MeshDemoTutorial.github.io.git
+    branch: master
