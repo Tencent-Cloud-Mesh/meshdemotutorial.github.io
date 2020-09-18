@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/meshdemotutorial.github.io/mesh.svg" />
+    
+
+    <title>
+        
+          timeout - Mesh Demo Tutorial
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/meshdemotutorial.github.io/css/book.css">
+
+    
+<script src="/meshdemotutorial.github.io/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <div>
+    <img src="/meshdemotutorial.github.io/mesh.svg">
+  </div>
+  <a href="/meshdemotutorial.github.io/">
+    <span>Mesh Demo Tutorial</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <h2 id="1-概览"><a href="#1-概览" class="headerlink" title="1. 概览"></a><a href="/meshdemotutorial.github.io/overview/tutorial">1. 概览</a></h2><ul>
+<li><a href="/meshdemotutorial.github.io/overview/tutorial">1.1 教程概览</a></li>
+<li><a href="/meshdemotutorial.github.io/overview/abstract">1.2 Demo概览</a></li>
+</ul>
+<h2 id="2-变更发布"><a href="#2-变更发布" class="headerlink" title="2. 变更发布"></a><a href="/meshdemotutorial.github.io/trafficManageMentAndObservability/index">2. 变更发布</a></h2><ul>
+<li><a href="/meshdemotutorial.github.io/trafficManageMentAndObservability/initialState">2.1 配置公网访问</a></li>
+<li><a href="/meshdemotutorial.github.io/trafficManageMentAndObservability/headerBasedRoute">2.2 基于流量特征内容的路由</a></li>
+<li><a href="/meshdemotutorial.github.io/trafficManageMentAndObservability/weightedRoute">2.3 权重路由（灰度发布）</a></li>
+</ul>
+<h3 id="3-分布式高可用架构"><a href="#3-分布式高可用架构" class="headerlink" title="3. 分布式高可用架构"></a><a href="/meshdemotutorial.github.io/highAvailability/index">3. 分布式高可用架构</a></h3><ul>
+<li><a href="/meshdemotutorial.github.io/highAvailability/faultInjection">3.1 故障注入测试服务弹性</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/timeout">3.2 配置服务timeout</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/stickySession">3.3 会话保持——一致性hash负载均衡策略</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/connectionPool">3.4 connection pool连接池</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/index">3.5 多集群下的服务间流量请求高可用</a><ul>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/serviceLocality">3.5.1 地域感知</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/failoverRegion">3.5.2 服务级别跨地域容灾</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-安全隔离"><a href="#4-安全隔离" class="headerlink" title="4. 安全隔离"></a><a href="/meshdemotutorial.github.io/security/index">4. 安全隔离</a></h3><ul>
+<li><a href="/meshdemotutorial.github.io/security/authn">4.1 认证Authentication</a></li>
+<li><a href="/meshdemotutorial.github.io/security/authz">4.2 授权Authorization</a></li>
+</ul>
+<h3 id="5-结语"><a href="#5-结语" class="headerlink" title="5. 结语"></a><a href="/meshdemotutorial.github.io/conclusion/conclusion">5. 结语</a></h3>
+</div>
+
+
+<script src="/meshdemotutorial.github.io/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="sidebar-toggle" onclick="sidebar_toggle()" onmouseover="add_inner()" onmouseleave="remove_inner()">
+  <div class="sidebar-toggle-inner"></div>
+</div>
+
+<script>
+function add_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.add('show')  
+}
+
+function remove_inner() {
+  let inner = document.querySelector('.sidebar-toggle-inner')
+  inner.classList.remove('show')
+}
+
+function sidebar_toggle() {
+    let sidebar_toggle = document.querySelector('.sidebar-toggle')
+    let sidebar = document.querySelector('.book-sidebar')
+    let content = document.querySelector('.off-canvas-content')
+    if (sidebar_toggle.classList.contains('extend')) { // show
+        sidebar_toggle.classList.remove('extend')
+        sidebar.classList.remove('hide')
+        content.classList.remove('extend')
+    }
+    else { // hide
+        sidebar_toggle.classList.add('extend')
+        sidebar.classList.add('hide')
+        content.classList.add('extend')
+    }
+}
+</script>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-1">
+        <style>
+  .post-nav-prev {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-prev:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+
+  }
+</style>
+
+
+
+  <div class="post-nav-prev">
+    <a href="/meshdemotutorial.github.io/highAvailability/faultInjection/" ><img src="/meshdemotutorial.github.io/prev.svg"></a>
+  </div>
+
+
+      </div>
+      <div class="column col-10">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h2 id="3-2-配置服务timeout"><a href="#3-2-配置服务timeout" class="headerlink" title="3.2 配置服务timeout"></a>3.2 配置服务timeout</h2><p><img src="/meshdemotutorial.github.io/highAvailability/timeout/../../images/netCommunication/3-2-1.svg" alt="图3-2-1-order服务timeout 3s"></p>
+<p>背景：通过对stock服务配置故障注入，发现由于故障会导致网站用户的请求一直处于等待状态，为优化网站用户的浏览体验，需要为服务配置timeout。</p>
+<p>应用以下VS，为order服务配置3秒的超时时间，cart服务不设置超时时间作为参照对比。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">kubectl</span> <span class="string">apply</span> <span class="string">-f</span> <span class="bullet">-</span> <span class="string">&lt;&lt;EOF</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">networking.istio.io/v1alpha3</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">VirtualService</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">order-vs</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">base</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">hosts:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">  <span class="attr">http:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">match:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">headers:</span></span><br><span class="line">            <span class="attr">cookie:</span></span><br><span class="line">              <span class="attr">exact:</span> <span class="string">vip=false</span></span><br><span class="line">      <span class="attr">route:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">destination:</span></span><br><span class="line">            <span class="attr">host:</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">            <span class="attr">subset:</span> <span class="string">v1</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">3000ms</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">match:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">headers:</span></span><br><span class="line">            <span class="attr">cookie:</span></span><br><span class="line">              <span class="attr">exact:</span> <span class="string">vip=true</span></span><br><span class="line">      <span class="attr">route:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">destination:</span></span><br><span class="line">            <span class="attr">host:</span> <span class="string">order.base.svc.cluster.local</span></span><br><span class="line">            <span class="attr">subset:</span> <span class="string">v2</span></span><br><span class="line">      <span class="attr">timeout:</span> <span class="string">3000ms</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<p>配置完成后，选择商品加入购物车，此时访问cart服务会有7秒的故障注入访问延时，且没有timeout处理，点击“CHECKOUT”发起结算调用order服务，此时虽然访问order服务也会有7秒的故障注入访问延时，但是有3秒的timeout超时处理，在调用order服务3秒内没有反应会做超时处理。</p>
+<p><img src="/meshdemotutorial.github.io/highAvailability/timeout/../../images/netCommunication/3-2-2.png" alt="图3-2-2-cart服务调用order服务timeout显示"></p>
+<p>超时配置已完成，对于服务的故障注入测试已完成，可删除关联stock服务的VirtualService资源以解除对stock服务配置的故障注入策略。</p>
+<p><img src="/meshdemotutorial.github.io/highAvailability/timeout/../../images/netCommunication/3-2-3.png" alt="图3-2-3-删除stock服务关联Virtual Service以取消故障注入配置"></p>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/meshdemotutorial.github.io/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-1">
+        <style>
+  .post-nav-next {
+    position: fixed;
+    top: 50%;
+    font-size: 50px;
+    width: 2rem;
+    height: 100%;
+  }
+  .post-nav-next:hover{
+    opacity: 0.5;
+  }
+  .post-nav img {
+    width: 30px;
+    height: 30px;
+  }
+
+</style>
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/meshdemotutorial.github.io/highAvailability/stickySession/" ><img src="/meshdemotutorial.github.io/next.svg"></a>
+  </div>
+
+
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #eee;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #3d3737;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      /* opacity: 0; */
+      padding: 0px 6px 3px;
+      position: absolute;
+      right: 10px;
+      top: 6pxpx;
+      border: 0px;
+    }
+
+    .highlight-wrap .copy-btn:hover {
+      background-color: #534f4f;
+    } 
+
+    .highlight-wrap {
+      position: relative;
+    }
+    
+    </style>
+    <script>
+      $('.highlight').each(function (i, e) {
+        var $wrap = $('<div>').addClass('highlight-wrap')
+        $(e).after($wrap)
+        $wrap.append($('<button>').addClass('copy-btn').append('copy').on('click', function (e) {
+          var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+            return $(e).text()
+          }).toArray().join('\n')
+          var ta = document.createElement('textarea')
+          document.body.appendChild(ta)
+          ta.style.position = 'absolute'
+          ta.style.top = '0px'
+          ta.style.left = '0px'
+          ta.value = code
+          ta.select()
+          ta.focus()
+          var result = document.execCommand('copy')
+          document.body.removeChild(ta)
+          // if(theme.codeblock.copy_button.show_result){
+          //   if(result)$(this).text('{{__("theme.copyWords.copy_success")}}')
+          //   else $(this).text('{{__("theme.copyWords.copy_failure")}}') 
+          // }
+          $(this).blur()
+        })).on('mouseleave', function (e) {
+          var $b = $(this).find('.copy-btn')
+          setTimeout(function () {
+            $b.text('copy')
+          }, 300)
+        }).append(e)
+      })
+  </script>
+  
+
+</body>
+</html>
+
+
+<script src="/meshdemotutorial.github.io/js/book.js"></script>
