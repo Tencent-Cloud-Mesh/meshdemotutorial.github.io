@@ -75,8 +75,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <li><a href="/meshdemotutorial.github.io/highAvailability/stickySession">3.3 会话保持——一致性hash负载均衡策略</a></li>
 <li><a href="/meshdemotutorial.github.io/highAvailability/connectionPool">3.4 connection pool连接池</a></li>
 <li><a href="/meshdemotutorial.github.io/highAvailability/failover/index">3.5 多集群下的服务间流量请求高可用</a><ul>
-<li><a href="/meshdemotutorial.github.io/highAvailability/failover/serviceLocality">3.5.1 地域感知</a></li>
-<li><a href="/meshdemotutorial.github.io/highAvailability/failover/failoverRegion">3.5.2 服务级别跨地域容灾</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/ingressLocality">3.5.1 就近接入</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/serviceLocality">3.5.2 地域感知</a></li>
+<li><a href="/meshdemotutorial.github.io/highAvailability/failover/failoverRegion">3.5.3 服务级别跨集群容灾</a></li>
 </ul>
 </li>
 </ul>
@@ -168,8 +169,8 @@ function sidebar_toggle() {
         </div>
         <div class="book-content">
           <div class="book-post">
-  <h2 id="3-5-多集群下的服务间流量请求高可用"><a href="#3-5-多集群下的服务间流量请求高可用" class="headerlink" title="3.5 多集群下的服务间流量请求高可用"></a>3.5 多集群下的服务间流量请求高可用</h2><p>随着网站业务规模的扩张，基于安全性的主备考虑，以及网站用户扩张到多个地域后，希望个地域的用户可实现就近接入。网站需要在多个可用区，甚至多个地域部署一套业务，涉及到跨可用区/地域多集群下保证服务间流量请求高可用的需求。</p>
-<p>后续步骤会演示同服务网格地域跨可用区的请求高可用能力。</p>
+  <h2 id="3-5-多集群下的服务间流量请求高可用"><a href="#3-5-多集群下的服务间流量请求高可用" class="headerlink" title="3.5 多集群下的服务间流量请求高可用"></a>3.5 多集群下的服务间流量请求高可用</h2><p>随着网站业务规模的扩张，基于安全性的主备考虑，或网站用户扩张到多个地域后，电商网站部署模式由单集群变为多集群。集群是跨可用区，或跨地域，以实现容灾或就近接入。此时涉及到跨可用区/地域多集群下保证服务间流量请求高可用的需求。</p>
+<p>后续步骤会以跨可用区的多集群演示服务网格就近接入、地域感知、服务级别容灾的能力。</p>
 
 </div>
 
@@ -209,7 +210,7 @@ function sidebar_toggle() {
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/meshdemotutorial.github.io/highAvailability/failover/serviceLocality/" ><img src="/meshdemotutorial.github.io/next.svg"></a>
+    <a href="/meshdemotutorial.github.io/highAvailability/failover/ingressLocality/" ><img src="/meshdemotutorial.github.io/next.svg"></a>
   </div>
 
 
