@@ -180,7 +180,7 @@ function sidebar_toggle() {
 
 <p>配置完成后，通过istio-ingressgateway的公网IP地址即可访问到Demo网站，当前部署的网站的结构如下：</p>
 <p><img src="/meshdemotutorial.github.io/trafficManageMentAndObservability/initialState/../../images/releaseAndObserve/2-1-3.svg" alt="图2-1-3-配置公网访问frontend service完成"></p>
-<p>点击链接访问网站后，可登陆（username1-5均可登陆，1-3为会员，4-5为非会员）、添加购物车，下单，以产生调用完所有部署的服务的请求，网站界面右下角的悬浮窗展示了前端服务当前调用服务的名称、地域、版本、pod name信息。</p>
+<p>点击链接访问网站后，可登陆（1-5均可登陆，1-3为会员，4-5为非会员）、添加购物车，下单，以产生调用完所有部署的服务的请求，网站界面右下角的悬浮窗展示了前端服务当前调用服务的名称、地域、版本、pod name信息。</p>
 <p><img src="/meshdemotutorial.github.io/trafficManageMentAndObservability/initialState/../../images/releaseAndObserve/2-1-4.png" alt="图2-1-4-悬浮窗信息展示"></p>
 <p>有流量数据后，可点击网络拓扑tab可查看网格内网络流量的拓扑图。点击服务tab，服务详情页面可查看到请求的调用链，可查看调用stock服务的完整链路及每层调用的详细信息。</p>
 <p>业务规模增加，服务数量较多时，几乎每个前端请求都会形成复杂的调用链路，此时需要能够：在复杂的链路中快速定位和分析问题，判定故障影响范围；或需要梳理服务的调用依赖关系，判断其合理性；或分析链路的请求耗时等性能，做串并行分析的调用逻辑优化等。</p>
