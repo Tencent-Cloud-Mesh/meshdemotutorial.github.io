@@ -38,7 +38,7 @@ mesh tutorial基于hexo博客框架进行部署，所以要部署mesh tutorial�
 
 ## 6. 访问网站
 
-github pages: https://tencent-cloud-mesh.github.io/MeshDemoTutorial.github.io/
+github pages: https://tencent-cloud-mesh.github.io/meshdemotutorial.github.io/
 
-gitee pages: https://tencent-cloud-mesh.github.io/meshdemotutorial.github.io/overview/abstract/
+gitee pages: http://tencent-cloud-mesh.gitee.io/meshdemotutorial.github.io/
 
